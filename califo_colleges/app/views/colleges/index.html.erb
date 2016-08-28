@@ -1,0 +1,18 @@
+<div class="row">
+	<h2>List of colleges in usa</h2>
+	<ul>		
+	<% @colleges.each do|college| %>
+		<% if !college.empty? %>
+		<li>
+			<span> <%= college["name"] %> </span>
+			<span> #<%= college["rank"] %>	</span> 
+			<span> <%= college["tuition_fees"] %> </span>
+			<span> <%= college["total_enrollment"]%> </span>
+			<span> <%= college["acceptance_rate"] %> </span>
+			<span> <%= college["average_retention_rates"] %> </span>
+			<span> <%= college["graduation_rate"] %> </span>
+		</li>
+		<% end %>
+	<% end %>
+	</ul>
+</div>
