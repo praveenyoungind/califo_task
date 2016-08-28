@@ -5,14 +5,17 @@
 		<% if !college.empty? %>
 		<li>
 			<span> <%= college["name"] %> </span>
-			<span> #<%= college["rank"] %>	</span> 
-			<span> <%= college["tuition_fees"] %> </span>
-			<span> <%= college["total_enrollment"]%> </span>
-			<span> <%= college["acceptance_rate"] %> </span>
-			<span> <%= college["average_retention_rates"] %> </span>
-			<span> <%= college["graduation_rate"] %> </span>
+			<span> Rank #<%= college["rank"] %>	</span> 
+			<span> Fee: <%= college["tuition_fees"] %> </span>
+			<span> Enrollment: <%= college["total_enrollment"]%> </span>
+			<span> Acceptance Rate: <%= college["acceptance_rate"] %> </span>
+<!-- 			<span> <%= college["average_retention_rates"] %> </span>
+			<span> <%= college["graduation_rate"] %> </span> -->
 		</li>
 		<% end %>
 	<% end %>
 	</ul>
+	<div class="pagination_block">
+		<%= paginate @colleges %>
+	</div>
 </div>
